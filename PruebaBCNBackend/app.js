@@ -6,11 +6,13 @@ const CommentRepository = require('./repositories/commentRepository');
 const CommentService = require('./services/commentServices');
 const CommentController = require('./controllers/commentController');
 const FlightController = require('./controllers/flightController');
+var cors = require('cors');
 
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
+app.use(cors());
 
 // Configurar la instancia de Sequelize
 sequelize
